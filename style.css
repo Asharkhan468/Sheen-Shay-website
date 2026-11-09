@@ -88,6 +88,8 @@
                 border-radius:1.5rem 1.5rem 0 0; max-width:100%; max-height:92vh; padding-bottom:calc(1.5rem + env(safe-area-inset-bottom)); }
             #toastContainer { align-items:stretch; }
             #cartPanel { max-width:100vw; }
+            #cartDrawer > div:last-child { padding-left:0; width:100%; }
+            #promoInput { min-width:0; }
         }
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior:auto !important; }
@@ -287,7 +289,7 @@
         }
 
         .testimonial-track:hover,
-        .testimonial-track:focus-within {
+        .testimonial-marquee:focus-within .testimonial-track {
             animation-play-state: paused;
         }
 
@@ -592,6 +594,165 @@
         @media (prefers-reduced-motion: reduce) and (max-width: 479px) {
             .testimonial-card {
                 flex-basis: 85%;
+            }
+        }
+
+        /* Mobile-first storefront refinements; desktop styling stays unchanged. */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            #storeView > section:first-child > div > .grid {
+                gap: 2rem;
+                grid-template-columns: repeat(12, minmax(0, 1fr));
+            }
+
+            #storeView > section:first-child > div > .grid > div:first-child {
+                grid-column: span 7;
+            }
+
+            #storeView > section:first-child > div > .grid > div:last-child {
+                grid-column: span 5;
+            }
+        }
+
+        @media (max-width: 639px) {
+            #storeView > section:first-child {
+                padding-bottom: 2rem;
+                padding-top: 1.5rem;
+            }
+
+            #storeView > section:first-child .grid > div:first-child > :not([hidden]) ~ :not([hidden]) {
+                margin-top: 1.125rem;
+            }
+
+            #storeView > section:first-child .glass-card > img {
+                height: clamp(15rem, 68vw, 17rem);
+            }
+
+            #mobileSearchInput {
+                min-height: 44px;
+            }
+
+            #categoryFilters button {
+                min-height: 44px;
+            }
+
+            footer a,
+            footer button {
+                align-items: center;
+                display: inline-flex;
+                min-height: 44px;
+            }
+
+            .story-section,
+            #gift-occasions,
+            .process-section,
+            .testimonial-section,
+            #gift-faq,
+            .closing-section {
+                padding-block: 3rem;
+            }
+
+            .story-image-wrap {
+                width: min(100%, 17rem);
+            }
+
+            .story-image {
+                aspect-ratio: 1;
+            }
+
+            .occasion-tile {
+                min-height: 8.5rem;
+            }
+
+            .faq-item summary {
+                padding-block: 1rem;
+            }
+
+            #productGrid .product-card-hover > .relative.overflow-hidden {
+                height: clamp(12rem, 58vw, 14rem);
+            }
+
+            #productGrid .product-card-hover button {
+                min-height: 44px;
+                min-width: 44px;
+            }
+
+            #cartPanel button,
+            #productQuickViewModal button,
+            #checkoutModal button,
+            #receiptModal button {
+                min-height: 44px;
+            }
+
+            #promoInput + button {
+                min-height: 44px;
+            }
+        }
+
+        @media (min-width: 360px) and (max-width: 639px) {
+            #productGrid {
+                gap: 0.75rem;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            #productGrid .product-card-hover > .relative.overflow-hidden {
+                height: clamp(8.5rem, 38vw, 10rem);
+            }
+
+            #productGrid .product-card-hover > .p-5 {
+                gap: 0.625rem;
+                padding: 0.75rem;
+            }
+
+            #productGrid .product-card-hover h3 {
+                font-size: 0.875rem;
+                line-height: 1.35;
+            }
+
+            #productGrid .product-card-hover h3 + p {
+                font-size: 0.7rem;
+                line-height: 1.5;
+            }
+
+            #productGrid .product-card-hover .border-t {
+                align-items: center;
+                gap: 0.25rem;
+                flex-wrap: wrap;
+            }
+
+            #productGrid .product-card-hover .border-t > div:first-child {
+                min-width: 0;
+            }
+
+            #productGrid .product-card-hover .border-t > div:last-child {
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            #productGrid .product-card-hover .border-t > div:first-child {
+                flex-basis: 100%;
+            }
+
+            #gift-occasions .occasion-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .testimonial-card {
+                flex-basis: calc(100vw - 5rem);
+            }
+        }
+
+        @media (max-width: 359px) {
+            #gift-occasions .occasion-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                flex-basis: calc(100vw - 5.5rem);
             }
         }
     
