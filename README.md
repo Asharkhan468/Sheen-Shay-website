@@ -1,104 +1,69 @@
 # Sheen & Shay Creates — Website Package
 
-A responsive, frontend-only gift shop website for **Sheen & Shay Creates**.
+A responsive, frontend-only gift shop for **Sheen & Shay Creates**, featuring a product catalog, custom hamper request form, cart and checkout, order tracking, and an admin dashboard.
 
-## Files
+## Project files
 
-- `index.html` — Complete website (HTML, styling, and JavaScript in one file).
-- `README.md` — Setup instructions, feature notes, and a section for feedback/change requests.
+- `index.html` — Storefront, product catalog markup, custom gift builder, gifting information, FAQ, testimonial placeholders, order tracking, admin interface, and checkout/cart dialogs.
+- `style.css` — Brand styling, responsive layouts, animations, accessibility preferences, and the testimonial marquee.
+- `app.js` — Product catalog behavior, search and category filters, cart and checkout, custom WhatsApp requests, order tracking, and admin functionality.
+- `README.md` — Setup, feature, and publishing notes.
 
-## How to run
+## Run the website
 
-1. Extract the ZIP file.
-2. Open `index.html` in Google Chrome, Microsoft Edge, or another modern browser.
-3. Internet access is recommended because Google Sans and Tailwind CSS load from their CDNs.
+1. Open `index.html` in a current desktop or mobile browser.
+2. Internet access is recommended: Tailwind CSS and Google Sans are loaded from CDNs.
 
-No Node.js installation or build step is required.
+No build step or Node.js installation is required.
 
-## Main features
+## Storefront features
 
-- Responsive storefront and product browsing.
-- Product detail view when a product is selected.
-- Cart and checkout flow.
-- Admin product management: add, edit, and delete products.
-- Product images can be uploaded from a device or added through an image URL.
-- Individual pricing and sale settings for every product.
-- Automatic discount percentage calculation and sale-price display.
-- Order number generation and customer order tracking.
-- Order status management in the admin area.
-- Improved footer with social/contact icons.
-- Google Sans typography.
+- Responsive product catalog with search and category filters.
+- Product quick view, listed gift-wrap choices, and add-to-cart or buy-now actions.
+- Cart, checkout, order receipts, and customer order tracking.
+- Custom hamper request form that opens a WhatsApp conversation with the request details.
+- Admin tools for managing products, prices, images, stock, and orders.
+- Local product and order data stored in the browser.
+
+### Gifting experience
+
+- An editorial section about thoughtful, personalized gifting.
+- Occasion links for birthdays, anniversaries, Eid and festive moments, weddings and bridal showers, baby welcomes, and graduation or corporate gifting. These reflect the occasions present in the custom request form.
+- A step-by-step explanation of the existing custom request and storefront ordering paths.
+- A responsive FAQ covering personalization, customization, preparation, shipping, packaging, corporate requests, custom orders, returns, damaged items, and contact.
+- A closing invitation linking back to the catalog and custom gift builder.
+
+### Testimonials and review carousel
+
+- A continuously moving testimonial marquee with a slow 66-second loop.
+- Approximately three cards are visible on desktop, two on tablet, and one on mobile.
+- Hovering or keyboard focus pauses the animation.
+- When reduced motion is enabled, animation stops and the cards become a horizontally scrollable row.
+- The displayed cards are **editable placeholders, not real reviews**. Replace them only with genuine customer feedback and obtain permission before publishing identifying details. Do not present placeholder content as a customer endorsement.
 
 ## Product prices and sales
 
 Each product has its own pricing settings in the admin product form:
 
 1. Enter the **Regular / Original Price**.
-2. Leave **Put this product on sale** unchecked if the product is not discounted. The storefront displays only the regular price.
+2. Leave **Put this product on sale** unchecked if the product is not discounted; the storefront displays its regular price.
 3. Check **Put this product on sale** to apply a discount to that product only.
-4. Enter the **Discounted / Sale Price**. It must be lower than the regular price.
+4. Enter a **Discounted / Sale Price** lower than the regular price.
 5. Save the product. The website calculates the discount percentage and displays the sale price with the original price crossed out.
 
-You can turn the sale off for one product without affecting any other product. The sale price is the amount used in the cart and checkout. Products already stored by an older version are supported; their previous discounted prices are retained when they have a valid original price.
+Sales can be enabled or disabled for products independently. The active product price is used in the cart and checkout. Previously stored products with a valid original price remain supported.
 
-## Important notes
+## Before publishing
 
-- This version uses browser `localStorage`. Products and orders are saved in the browser where the website is being used; they are not automatically shared between different devices or browsers.
-- Order tracking works with orders saved in that same browser. For real customer tracking across devices, the site will need a backend/database and hosting setup.
-- The WhatsApp contact number in the HTML is currently a placeholder (`+92 300 0000000`). Replace it with the shop's actual WhatsApp number before publishing.
-- Admin access in a frontend-only website is not secure authentication. Do not store sensitive customer or business data in this version.
+- Replace the WhatsApp placeholder number (`+92 300 0000000`) with the shop's real contact number. It appears in the custom request flow and contact links.
+- Fill in the bracketed FAQ placeholders with confirmed business policies and details, including preparation estimates, delivery estimates, packaging scope, returns and exchanges, and how to report damaged or incorrect orders.
+- Replace testimonial placeholders only with real reviews approved for publication.
+- Confirm that displayed shipping prices, delivery coverage, promotional offers, and product details are current.
+- Admin access in this frontend-only website is not secure authentication. Do not rely on it to protect sensitive business or customer information.
 
-## Friend's feedback — requested changes
+## Storage and deployment limitations
 
-> **Please fill in this section.** Describe what you want changed, added, removed, or fixed. Be as specific as possible. You can add screenshots or examples separately and mention their filenames here.
-
-### 1. Changes to make
-
-Write the requested changes here:
-
-- [ ] Change 1:
-- [ ] Change 2:
-- [ ] Change 3:
-- [ ] Change 4:
-
-### 2. Problems / bugs noticed
-
-For each issue, mention what you clicked, what happened, and what you expected to happen.
-
-- **Problem:**
-  - Steps to reproduce:
-  - Expected result:
-  - Actual result:
-
-### 3. Design / UI feedback
-
-- Sections or pages to improve:
-- Colors / fonts / layout preferences:
-- Example website or screenshot (if any):
-
-### 4. Product, pricing, cart, checkout, and tracking feedback
-
-- Product page changes:
-- Regular/original price or sale-price changes:
-- Cart / checkout changes:
-- Order tracking changes:
-- Admin panel changes:
-
-### 5. Priority
-
-Mark each request:
-
-- [ ] High — must be fixed first
-- [ ] Medium — important improvement
-- [ ] Low — optional enhancement
-
-### 6. Extra notes
-
-Add any other ideas or instructions here:
-
-
----
-
-## Sending feedback
-
-Save this README after filling in the feedback section, then send the completed README (and any screenshots) back with the ZIP. Please do not edit the website code unless you specifically intend to; write requested changes in the feedback section above.
+- Products, cart contents, and orders use browser `localStorage`; they are not automatically shared across browsers or devices.
+- Order tracking only works with orders saved in the same browser.
+- Cross-device inventory, customer order tracking, secure authentication, and centralized order management require a backend and database.
+- Tailwind CSS and Google Sans are loaded externally, so an internet connection is recommended.
