@@ -1,0 +1,2021 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#B24D62" />
+    <meta
+      name="description"
+      content="Custom gift hampers, LED name lamps and preserved rose bouquets, made by hand and delivered across Pakistan."
+    />
+    <title>
+      Sheen & Shay Creates 🎀 | Luxury Custom Gifts & Keepsakes Pakistan
+    </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                pink: "#FDE2E4",
+                lightpink: "#FFF0F5",
+                cream: "#FCF8F5",
+                rose: "#E59BA8",
+                rosedark: "#B24D62",
+                gold: "#B8923A",
+                slate: "#2D3748",
+                emerald: "#25D366",
+                emeraldDark: "#1EBE5D",
+              },
+            },
+            fontFamily: {
+              sans: ["Google Sans", "Google Sans Flex", "Arial", "sans-serif"],
+              serif: ["Google Sans", "Google Sans Flex", "Arial", "sans-serif"],
+            },
+            animation: {
+              "float-slow": "floatSlow 6s ease-in-out infinite",
+              "pulse-subtle": "pulseSubtle 3s ease-in-out infinite",
+              shimmer: "shimmer 2.5s infinite linear",
+            },
+            keyframes: {
+              floatSlow: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+              pulseSubtle: {
+                "0%, 100%": { opacity: "0.9", transform: "scale(1)" },
+                "50%": { opacity: "1", transform: "scale(1.03)" },
+              },
+              shimmer: {
+                "0%": { backgroundPosition: "-200% 0" },
+                "100%": { backgroundPosition: "200% 0" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-brand-cream text-brand-slate font-sans min-h-screen flex flex-col selection:bg-brand-rose selection:text-white relative overflow-x-hidden"
+  >
+    <!-- Top Announcement Bar -->
+    <div
+      class="bg-gradient-to-r from-brand-rosedark via-rose-500 to-brand-rose text-white text-xs sm:text-sm py-2 px-4 text-center font-semibold shadow-xs flex items-center justify-center space-x-2 z-50 relative"
+    >
+      <svg
+        class="w-4 h-4 text-white"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V6a2 2 0 10-2 2h2zm0 13C10.832 19.677 9.246 18 7.5 18S4.168 19.677 3 21c1.168-1.323 2.754-3 4.5-3s3.332 1.677 4.5 3zm0 0c1.168-1.323 2.754-3 4.5-3s3.332 1.677 4.5 3s2.754-3 4.5-3s3.332 1.677 4.5 3"
+        />
+      </svg>
+      <span
+        >Nationwide Express Delivery Across Pakistan! Free shipping on orders
+        over PKR 6,000.</span
+      >
+      <span
+        class="hidden md:inline-block bg-white/20 px-2 py-0.5 rounded-full text-[11px]"
+        >Use Code: SHEEN10</span
+      >
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <!-- Brand Logo -->
+        <div
+          class="flex items-center space-x-3 cursor-pointer group"
+          onclick="switchView('store')"
+        >
+          <div
+            class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-pink to-brand-rose flex items-center justify-center shadow-md transform group-hover:rotate-12 transition-transform duration-300 text-brand-rosedark"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V6a2 2 0 10-2 2h2zm0 13C10.832 19.677 9.246 18 7.5 18S4.168 19.677 3 21c1.168-1.323 2.754-3 4.5-3s3.332 1.677 4.5 3zm0 0c1.168-1.323 2.754-3 4.5-3s3.332 1.677 4.5 3s2.754-3 4.5-3s3.332 1.677 4.5 3"
+              />
+            </svg>
+          </div>
+          <div>
+            <h1
+              class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-gray-900 leading-none"
+            >
+              Sheen & Shay <span class="text-brand-rosedark">Creates</span>
+            </h1>
+            <p
+              class="text-[10px] sm:text-xs text-brand-rosedark font-semibold tracking-wider uppercase mt-1"
+            >
+              Luxury Custom Gifts & Keepsakes
+            </p>
+          </div>
+        </div>
+
+        <!-- Search Bar (Desktop) -->
+        <div class="hidden md:flex flex-1 max-w-md mx-8 relative">
+          <input
+            type="text"
+            id="searchInput"
+            oninput="handleSearch()"
+            placeholder="Search gift boxes, resin lamps, floral bouquets..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white/90 border border-brand-rose/30 focus:border-brand-rosedark focus:outline-none focus:ring-2 focus:ring-brand-pink/50 text-xs sm:text-sm transition-all shadow-inner"
+          />
+          <div class="absolute left-3.5 top-3 text-gray-400">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="flex items-center space-x-2 sm:space-x-3">
+          <!-- WhatsApp Custom Builder Button -->
+          <button
+            onclick="scrollToSection('custom-builder')"
+            class="hidden sm:flex items-center space-x-1.5 px-3.5 py-2 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors"
+          >
+            <svg
+              class="w-4 h-4 fill-current text-emerald-600"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+              />
+            </svg>
+            <span>Custom WhatsApp</span>
+          </button>
+
+          <!-- Cart Button -->
+          <button
+            onclick="toggleCartDrawer(true)"
+            id="cartBtn"
+            aria-label="Open cart"
+            class="relative p-2.5 rounded-full bg-gradient-to-r from-brand-pink to-brand-rose text-gray-800 hover:shadow-md transition-all transform active:scale-95"
+          >
+            <svg
+              class="w-5 h-5 text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span
+              id="cartBadge"
+              class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white transform scale-0 transition-transform"
+              >0</span
+            >
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Search Bar -->
+      <div class="px-4 pb-3 md:hidden">
+        <div class="relative">
+          <input
+            type="text"
+            id="mobileSearchInput"
+            oninput="handleSearch(true)"
+            placeholder="Search hampers, resin lights..."
+            class="w-full pl-9 pr-4 py-2 rounded-full bg-white border border-brand-rose/30 focus:border-brand-rosedark focus:outline-none text-xs"
+          />
+          <div class="absolute left-3 top-2.5 text-gray-400">
+            <svg
+              class="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- STOREFRONT VIEW CONTAINER -->
+    <main id="storeView" class="flex-1 transition-opacity duration-300">
+      <!-- High-End Professional Hero Showcase Section (Clean UI/UX) -->
+      <section
+        class="relative overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 bg-gradient-to-b from-brand-lightpink/70 via-brand-pink/20 to-transparent"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+          >
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+              <div
+                class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-brand-rose/30 shadow-xs text-xs font-bold text-brand-rosedark"
+              >
+                <span class="flex h-2 w-2 relative">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"
+                  ></span>
+                  <span
+                    class="relative inline-flex rounded-full h-2 w-2 bg-brand-rosedark"
+                  ></span>
+                </span>
+                <span>Handcrafted Custom Keepsakes & Hampers</span>
+                <span class="text-gray-400">|</span>
+                <span>Pakistan 🇵🇰</span>
+              </div>
+
+              <h1
+                class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight tracking-tight"
+              >
+                Gifts made by hand, for the person you&rsquo;re thinking of
+              </h1>
+
+              <p
+                class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed"
+              >
+                Discover exquisite curated gift boxes, laser-engraved LED lamps,
+                floral keepsakes, and personalized wedding hampers delivered to
+                your loved ones across Pakistan.
+              </p>
+
+              <div
+                class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2"
+              >
+                <a
+                  href="#catalog"
+                  class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-rosedark to-brand-rose text-white font-bold text-sm shadow-md hover:shadow-xl hover:opacity-95 transition-all text-center transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                >
+                  <span>Browse Gift Store</span>
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </a>
+                <button
+                  onclick="scrollToSection('custom-builder')"
+                  class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white border border-brand-rose text-brand-rosedark font-bold text-sm hover:bg-brand-pink/30 transition-all text-center flex items-center justify-center space-x-2"
+                >
+                  <span>Design Custom Hamper</span>
+                  <span>🎀</span>
+                </button>
+              </div>
+
+              <!-- Trust Badges -->
+              <div
+                class="pt-6 grid grid-cols-3 gap-3 border-t border-brand-rose/20 max-w-md mx-auto lg:mx-0"
+              >
+                <div class="flex items-center space-x-2 text-left">
+                  <div
+                    class="p-2 rounded-xl bg-white shadow-xs text-brand-rosedark"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-xs font-bold text-gray-700"
+                    >100% Bespoke</span
+                  >
+                </div>
+                <div class="flex items-center space-x-2 text-left">
+                  <div
+                    class="p-2 rounded-xl bg-white shadow-xs text-brand-rosedark"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-xs font-bold text-gray-700"
+                    >Express Delivery</span
+                  >
+                </div>
+                <div class="flex items-center space-x-2 text-left">
+                  <div
+                    class="p-2 rounded-xl bg-white shadow-xs text-brand-rosedark"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-xs font-bold text-gray-700"
+                    >5,000+ Happy Customers</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Clean Professional Hero Showcase Grid -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative mx-auto max-w-md lg:max-w-none">
+                <!-- Main Hero Feature Image -->
+                <div
+                  class="glass-card rounded-3xl p-3 shadow-2xl relative overflow-hidden transform"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80"
+                    alt="Luxury Gift Hamper"
+                    class="w-full h-80 sm:h-[26rem] object-cover rounded-t-[999px] rounded-b-2xl"
+                  />
+
+                  <div
+                    class="absolute bottom-6 left-6 right-6 glass-card p-4 rounded-2xl shadow-lg flex items-center justify-between border border-white"
+                  >
+                    <div class="flex items-center space-x-3">
+                      <div
+                        class="w-10 h-10 rounded-xl bg-brand-pink flex items-center justify-center text-brand-rosedark"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-xs font-bold text-gray-900">
+                          Premium Signature Packaging
+                        </p>
+                        <p class="text-[10px] text-gray-500">
+                          Includes Silk Ribbon & Greeting Card
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center space-x-1 text-amber-500 text-xs font-bold"
+                    >
+                      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                        />
+                      </svg>
+                      <span>5.0</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Floating Glow Accent -->
+                <div
+                  class="absolute -top-6 -right-6 w-32 h-32 bg-brand-rose/20 rounded-full blur-2xl pointer-events-none"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Catalog Section -->
+      <section
+        id="catalog"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10"
+      >
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-8 space-y-4 md:space-y-0"
+        >
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-serif font-bold text-gray-900">
+              Curated Luxury Gift Collection
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-500 mt-1">
+              Select any item to view custom options or add directly to your
+              cart
+            </p>
+          </div>
+          <div class="text-xs text-gray-500 font-medium">
+            Showing
+            <span id="productCount" class="font-bold text-brand-rosedark"
+              >0</span
+            >
+            gifts
+          </div>
+        </div>
+
+        <!-- Filter Categories Row -->
+        <div
+          class="flex items-center space-x-2 overflow-x-auto pb-4 no-scrollbar mb-6"
+          id="categoryFilters"
+        >
+          <!-- Populated via JS -->
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div
+          id="productGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6"
+        >
+          <!-- Populated via JS -->
+        </div>
+
+        <!-- Empty State Notice -->
+        <div
+          id="emptyCatalogState"
+          class="hidden text-center py-16 glass-card rounded-3xl max-w-lg mx-auto my-8"
+        >
+          <div class="text-5xl mb-3">🔍</div>
+          <h3 class="text-lg font-bold text-gray-800">
+            No matching luxury gifts found
+          </h3>
+          <p class="text-xs text-gray-500 mt-1">
+            Try tweaking your search term or selecting a different category
+            filter.
+          </p>
+          <button
+            onclick="resetFilters()"
+            class="mt-4 px-5 py-2 rounded-full bg-brand-rose text-white text-xs font-semibold hover:bg-brand-rosedark transition-colors"
+          >
+            Reset Catalog Filters
+          </button>
+        </div>
+      </section>
+
+      <!-- Dedicated WhatsApp Custom Gift Builder -->
+      <section
+        id="custom-builder"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14"
+      >
+        <div
+          class="glass-card rounded-3xl p-6 sm:p-10 border border-brand-rose/40 shadow-xl relative overflow-hidden bg-gradient-to-br from-white/95 via-brand-lightpink/40 to-white/95"
+        >
+          <div class="max-w-3xl mx-auto text-center mb-8 space-y-2">
+            <span
+              class="px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider inline-block"
+              >Bespoke Custom Hampers</span
+            >
+            <h2 class="text-2xl sm:text-4xl font-serif font-bold text-gray-900">
+              Design Your Custom Gift Box
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-600">
+              Have a unique theme or color palette in mind? Fill out your
+              details below to chat directly with our lead designer on WhatsApp!
+            </p>
+          </div>
+
+          <form
+            id="customGiftForm"
+            onsubmit="handleCustomWhatsAppSubmit(event)"
+            class="max-w-2xl mx-auto space-y-5"
+          >
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-gray-700 mb-1"
+                  >Your Full Name *</label
+                >
+                <input
+                  type="text"
+                  id="custName"
+                  required
+                  placeholder="e.g. Ayesha Khan"
+                  class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-brand-rosedark focus:ring-2 focus:ring-brand-pink/50 text-xs sm:text-sm bg-white/90"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 mb-1"
+                  >Target Delivery City *</label
+                >
+                <input
+                  type="text"
+                  id="custCity"
+                  required
+                  placeholder="e.g. Lahore, Karachi, Islamabad"
+                  class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-brand-rosedark focus:ring-2 focus:ring-brand-pink/50 text-xs sm:text-sm bg-white/90"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-gray-700 mb-1"
+                  >Special Occasion *</label
+                >
+                <select
+                  id="custOccasion"
+                  required
+                  class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-brand-rosedark focus:ring-2 focus:ring-brand-pink/50 text-xs sm:text-sm bg-white/90"
+                >
+                  <option value="Birthday">Birthday Celebration</option>
+                  <option value="Anniversary">Anniversary & Romance</option>
+                  <option value="Eid Gift">Eid & Festive Celebration</option>
+                  <option value="Bridal Shower">Bridal Shower / Wedding</option>
+                  <option value="Baby Welcome">
+                    Baby Welcome / Announcement
+                  </option>
+                  <option value="Graduation / Corporate">
+                    Graduation / Corporate
+                  </option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 mb-1"
+                  >Budget Range (PKR)</label
+                >
+                <div class="flex items-center space-x-3">
+                  <input
+                    type="range"
+                    id="custBudget"
+                    min="3000"
+                    max="35000"
+                    step="500"
+                    value="7500"
+                    oninput="updateBudgetValue(this.value)"
+                    class="w-full accent-brand-rosedark h-2 bg-gray-200 rounded-lg cursor-pointer"
+                  />
+                  <span
+                    id="budgetValueDisplay"
+                    class="text-xs font-extrabold text-brand-rosedark w-24 text-right"
+                    >PKR 7,500</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Customization Notes & Color Theme *</label
+              >
+              <textarea
+                id="custNotes"
+                rows="3"
+                required
+                placeholder="Specify items (e.g. Soy Candle, Resin Letter, Chocolates, LED Frame) and color palette (e.g. Pastel Pink & Gold ribbon)..."
+                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-brand-rosedark focus:ring-2 focus:ring-brand-pink/50 text-xs sm:text-sm bg-white/90 resize-none"
+              ></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="w-full py-3.5 rounded-2xl bg-brand-emerald text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg hover:bg-brand-emeraldDark transition-all flex items-center justify-center space-x-2"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path
+                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                  />
+                </svg>
+                <span>Send Custom Request via WhatsApp (+92 300 0000000)</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- PRODUCT QUICK-VIEW MODAL (PRODUCT OPEN) -->
+    <div
+      id="productQuickViewModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm hidden"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-brand-pink p-6 sm:p-8 relative"
+      >
+        <button
+          onclick="closeProductModal()"
+          aria-label="Close"
+          class="absolute top-4 right-4 p-2 rounded-full text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors z-10"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6"
+          id="productModalContent"
+        >
+          <!-- Dynamically populated product details -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD CONTAINER (Secret Access) -->
+    <main
+      id="adminView"
+      class="hidden flex-1 transition-opacity duration-300 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8"
+    >
+      <div
+        class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 bg-white p-6 rounded-3xl shadow-sm border border-brand-rose/30"
+      >
+        <div>
+          <div class="flex items-center space-x-2">
+            <span
+              class="px-2.5 py-1 rounded-full bg-brand-pink text-brand-rosedark text-xs font-bold uppercase"
+              >Store Owner Admin</span
+            >
+            <span class="text-xs text-emerald-600 font-bold flex items-center"
+              >● LocalStorage Sync Active</span
+            >
+          </div>
+          <h2 class="text-2xl font-serif font-bold text-gray-900 mt-1">
+            Management Dashboard
+          </h2>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <button
+            onclick="exportOrdersCSV()"
+            class="px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold transition-colors flex items-center space-x-1"
+          >
+            <svg
+              class="w-4 h-4 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            <span>Export CSV</span>
+          </button>
+          <button
+            onclick="switchView('store')"
+            class="px-4 py-2 rounded-xl bg-brand-pink text-brand-rosedark hover:bg-brand-rose hover:text-white text-xs font-bold transition-colors"
+          >
+            ← Storefront
+          </button>
+          <button
+            onclick="logoutAdmin()"
+            class="px-3.5 py-2 rounded-xl bg-red-50 text-red-600 hover:bg-red-100 text-xs font-bold transition-colors"
+          >
+            Lock Admin
+          </button>
+        </div>
+      </div>
+
+      <!-- Metric KPI Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div
+          class="glass-card p-5 rounded-2xl border-l-4 border-brand-rosedark"
+        >
+          <p class="text-[11px] font-bold text-gray-400 uppercase">
+            Total Revenue
+          </p>
+          <h3
+            id="kpiRevenue"
+            class="text-xl sm:text-2xl font-bold text-gray-900 mt-1"
+          >
+            PKR 0
+          </h3>
+        </div>
+        <div class="glass-card p-5 rounded-2xl border-l-4 border-blue-400">
+          <p class="text-[11px] font-bold text-gray-400 uppercase">
+            Total Orders
+          </p>
+          <h3
+            id="kpiTotalOrders"
+            class="text-xl sm:text-2xl font-bold text-gray-900 mt-1"
+          >
+            0
+          </h3>
+        </div>
+        <div class="glass-card p-5 rounded-2xl border-l-4 border-amber-400">
+          <p class="text-[11px] font-bold text-gray-400 uppercase">
+            Pending Orders
+          </p>
+          <h3
+            id="kpiPendingOrders"
+            class="text-xl sm:text-2xl font-bold text-gray-900 mt-1"
+          >
+            0
+          </h3>
+        </div>
+        <div class="glass-card p-5 rounded-2xl border-l-4 border-emerald-400">
+          <p class="text-[11px] font-bold text-gray-400 uppercase">
+            Active Products
+          </p>
+          <h3
+            id="kpiActiveProducts"
+            class="text-xl sm:text-2xl font-bold text-gray-900 mt-1"
+          >
+            0
+          </h3>
+        </div>
+      </div>
+
+      <!-- Admin Tab Navigation -->
+      <div class="flex border-b border-gray-200 mb-6 space-x-2">
+        <button
+          onclick="switchAdminTab('products')"
+          id="adminTabProdBtn"
+          class="py-3 px-6 text-xs sm:text-sm font-bold border-b-2 border-brand-rosedark text-brand-rosedark focus:outline-none"
+        >
+          📦 Products Inventory CRUD
+        </button>
+        <button
+          onclick="switchAdminTab('orders')"
+          id="adminTabOrdersBtn"
+          class="py-3 px-6 text-xs sm:text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none"
+        >
+          🛍️ Customer Orders Dashboard
+        </button>
+      </div>
+
+      <!-- TAB 1: PRODUCT CRUD MANAGEMENT -->
+      <div id="adminTabProducts" class="space-y-8">
+        <div
+          class="glass-card p-6 rounded-3xl border border-brand-rose/30 shadow-md"
+        >
+          <h3 id="prodFormTitle" class="text-base font-bold text-gray-900 mb-4">
+            Add New Luxury Product
+          </h3>
+          <form
+            id="productForm"
+            onsubmit="handleProductSave(event)"
+            class="grid grid-cols-1 md:grid-cols-3 gap-4"
+          >
+            <input type="hidden" id="prodEditId" value="" />
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Product Title *</label
+              >
+              <input
+                type="text"
+                id="prodTitle"
+                required
+                placeholder="e.g., Luxury Eternal Rose Box"
+                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
+              />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Category *</label
+              >
+              <select
+                id="prodCategory"
+                required
+                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
+              >
+                <option value="Luxury Hampers">Luxury Hampers</option>
+                <option value="Personalized Keepsakes">
+                  Personalized Keepsakes
+                </option>
+                <option value="Floral & Bouquets">Floral & Bouquets</option>
+                <option value="LED & Lights">LED & Lights</option>
+                <option value="Custom Accessories">Custom Accessories</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Regular / Original Price (PKR) *</label
+              >
+              <input
+                type="number"
+                id="prodOrigPrice"
+                required
+                min="1"
+                oninput="updateProductDiscountPreview()"
+                placeholder="e.g., 5200"
+                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
+              />
+              <p class="text-[10px] text-gray-500 mt-1">
+                Normal price when no sale is active.
+              </p>
+            </div>
+
+            <div
+              class="md:col-span-2 rounded-xl border border-brand-rose/30 bg-brand-pink/20 p-3"
+            >
+              <label
+                class="flex items-center gap-2 text-xs font-bold text-gray-800 cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  id="prodSaleEnabled"
+                  onchange="toggleProductSaleFields()"
+                  class="accent-pink-600 w-4 h-4"
+                />
+                Put this product on sale
+              </label>
+              <p class="text-[10px] text-gray-500 mt-1">
+                Sale is optional and can be enabled separately for each product.
+              </p>
+              <div id="prodSalePriceWrap" class="hidden mt-3">
+                <label class="block text-xs font-bold text-gray-700 mb-1"
+                  >Discounted / Sale Price (PKR) *</label
+                >
+                <input
+                  type="number"
+                  id="prodSalePrice"
+                  min="1"
+                  oninput="updateProductDiscountPreview()"
+                  placeholder="e.g., 4500"
+                  class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
+                />
+                <p
+                  id="prodDiscountPreview"
+                  class="text-[10px] font-bold text-brand-rosedark mt-1"
+                ></p>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Product Image</label
+              >
+              <div class="space-y-2">
+                <div class="flex flex-wrap gap-3 text-xs">
+                  <label class="flex items-center gap-2"
+                    ><input
+                      type="radio"
+                      name="prodImageMode"
+                      value="upload"
+                      checked
+                      onchange="toggleProductImageMode()"
+                    />
+                    Upload from device</label
+                  >
+                  <label class="flex items-center gap-2"
+                    ><input
+                      type="radio"
+                      name="prodImageMode"
+                      value="url"
+                      onchange="toggleProductImageMode()"
+                    />
+                    Use image URL</label
+                  >
+                </div>
+                <input
+                  type="file"
+                  id="prodImageFile"
+                  accept="image/*"
+                  onchange="previewProductImage(event)"
+                  class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs bg-white"
+                />
+                <input
+                  type="url"
+                  id="prodImageUrl"
+                  placeholder="https://example.com/product-image.jpg"
+                  class="hidden w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
+                />
+                <img
+                  id="prodImagePreview"
+                  class="hidden w-24 h-24 object-cover rounded-xl border border-brand-rose/30"
+                  alt="Product image preview"
+                />
+                <p class="text-[10px] text-gray-500">
+                  Device uploads are compressed and saved in this browser. URL
+                  option is also available.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Stock Availability</label
+              >
+              <select
+                id="prodStockStatus"
+                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
+              >
+                <option value="In Stock">In Stock</option>
+                <option value="Limited Stock">Limited Stock</option>
+                <option value="Out of Stock">Out of Stock</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-3">
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Short Description *</label
+              >
+              <input
+                type="text"
+                id="prodDescription"
+                required
+                placeholder="Brief description of handcrafted contents..."
+                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
+              />
+            </div>
+
+            <div class="md:col-span-3 flex justify-end space-x-2 pt-2">
+              <button
+                type="button"
+                onclick="resetProductForm()"
+                class="px-5 py-2 rounded-xl border border-gray-300 text-xs font-bold text-gray-600 hover:bg-gray-100"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                id="saveProdBtn"
+                class="px-6 py-2 rounded-xl bg-brand-rosedark text-white text-xs font-bold hover:bg-brand-rose transition-colors shadow-xs"
+              >
+                Save Product
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Products Table -->
+        <div
+          class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden"
+        >
+          <div
+            class="px-6 py-4 border-b border-gray-100 flex justify-between items-center"
+          >
+            <h3 class="font-bold text-gray-800 text-sm sm:text-base">
+              Current Store Inventory
+            </h3>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr
+                  class="bg-gray-50 text-[11px] font-extrabold uppercase text-gray-500 border-b border-gray-100"
+                >
+                  <th class="py-3.5 px-6">Item</th>
+                  <th class="py-3.5 px-4">Category</th>
+                  <th class="py-3.5 px-4">Price (PKR)</th>
+                  <th class="py-3.5 px-4">Stock</th>
+                  <th class="py-3.5 px-6 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody
+                id="adminProductsTableBody"
+                class="divide-y divide-gray-100 text-xs text-gray-700"
+              >
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: CUSTOMER ORDERS MANAGEMENT -->
+      <div id="adminTabOrders" class="hidden space-y-6">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-3 mb-4"
+        >
+          <div class="w-full sm:w-auto">
+            <input
+              type="text"
+              id="adminOrderSearch"
+              oninput="renderAdminOrders()"
+              placeholder="Search Order ID or Customer Name..."
+              class="px-4 py-2 rounded-xl border border-gray-300 text-xs bg-white w-full sm:w-64 focus:outline-none focus:border-brand-rosedark"
+            />
+          </div>
+
+          <select
+            id="orderStatusFilter"
+            onchange="renderAdminOrders()"
+            class="px-3 py-2 rounded-xl border border-gray-300 text-xs bg-white font-medium w-full sm:w-auto"
+          >
+            <option value="ALL">All Order Statuses</option>
+            <option value="Pending">Pending</option>
+            <option value="Processing">Processing</option>
+            <option value="Dispatched">Dispatched</option>
+            <option value="Delivered">Delivered</option>
+          </select>
+        </div>
+
+        <div
+          class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden"
+        >
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr
+                  class="bg-gray-50 text-[11px] font-extrabold uppercase text-gray-500 border-b border-gray-100"
+                >
+                  <th class="py-3.5 px-6">Order ID & Date</th>
+                  <th class="py-3.5 px-4">Customer Details</th>
+                  <th class="py-3.5 px-4">Items Summary</th>
+                  <th class="py-3.5 px-4">Total PKR</th>
+                  <th class="py-3.5 px-4">Payment & Status</th>
+                  <th class="py-3.5 px-4 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody
+                id="adminOrdersTableBody"
+                class="divide-y divide-gray-100 text-xs text-gray-700"
+              >
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ORDER TRACKING -->
+    <section
+      id="order-tracking"
+      class="max-w-4xl mx-auto w-full px-4 sm:px-6 py-10"
+    >
+      <div
+        class="rounded-3xl bg-gradient-to-br from-white to-brand-lightpink border border-brand-rose/25 shadow-lg p-6 sm:p-8"
+      >
+        <div class="text-center mb-5">
+          <span
+            class="text-xs font-bold uppercase tracking-widest text-brand-rosedark"
+            >Order updates</span
+          >
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
+            Track Your Order
+          </h2>
+          <p class="text-sm text-gray-500 mt-2">
+            Enter the order number from your receipt to check its latest status.
+          </p>
+        </div>
+        <form
+          onsubmit="trackCustomerOrder(event)"
+          class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto"
+        >
+          <input
+            id="trackingOrderId"
+            required
+            placeholder="e.g. SS-123456"
+            class="flex-1 px-4 py-3 rounded-xl border border-brand-rose/30 bg-white text-sm"
+          />
+          <button
+            class="px-6 py-3 rounded-xl bg-brand-rosedark text-white font-bold text-sm hover:bg-brand-rose transition-colors"
+          >
+            Track Order
+          </button>
+        </form>
+        <div id="trackingResult" class="hidden max-w-xl mx-auto mt-5"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer
+      class="bg-gradient-to-br from-white via-brand-lightpink/60 to-brand-pink/40 border-t border-brand-rose/30 pt-14 pb-8 mt-auto"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pb-8 border-b border-brand-rose/20"
+        >
+          <div class="space-y-3 md:col-span-1">
+            <div class="flex items-center space-x-2">
+              <div
+                class="w-6 h-6 rounded-md bg-brand-pink flex items-center justify-center text-brand-rosedark"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V6a2 2 0 10-2 2h2zm0 13C10.832 19.677 9.246 18 7.5 18S4.168 19.677 3 21c1.168-1.323 2.754-3 4.5-3s3.332 1.677 4.5 3zm0 0c1.168-1.323 2.754-3 4.5-3s3.332 1.677 4.5 3s2.754-3 4.5-3s3.332 1.677 4.5 3"
+                  />
+                </svg>
+              </div>
+              <span class="font-serif font-bold text-lg text-gray-900"
+                >Sheen & Shay Creates</span
+              >
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Pakistan's premier luxury gift boutique for bespoke hampers, resin
+              keepsakes, and personalized romantic gift boxes. Handcrafted with
+              precision.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-gray-900 mb-3"
+            >
+              Quick Navigation
+            </h4>
+            <ul class="space-y-2 text-xs text-gray-600">
+              <li>
+                <a
+                  href="#catalog"
+                  class="hover:text-brand-rosedark inline-flex items-center gap-2"
+                  ><svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 5h16v14H4zM8 9h8M8 13h5"
+                    /></svg
+                  >Luxury Catalog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#order-tracking"
+                  class="hover:text-brand-rosedark inline-flex items-center gap-2"
+                  ><svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 7h11v10H3zM14 10h4l3 3v4h-7zM7 20a2 2 0 100-4 2 2 0 000 4zm11 0a2 2 0 100-4 2 2 0 000 4z"
+                    /></svg
+                  >Track Your Order</a
+                >
+              </li>
+              <li>
+                <a href="#custom-builder" class="hover:text-brand-rosedark"
+                  >WhatsApp Bespoke Order</a
+                >
+              </li>
+              <li>
+                <button
+                  onclick="openAdminPasscodeModal()"
+                  class="hover:text-brand-rosedark"
+                >
+                  Admin Portal
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-gray-900 mb-3"
+            >
+              Delivery Coverage
+            </h4>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan,
+              Sialkot, Peshawar, Quetta & All Pakistan Cities.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-gray-900 mb-3"
+            >
+              Contact Support
+            </h4>
+            <a
+              href="https://wa.me/923000000000"
+              target="_blank"
+              rel="noopener"
+              class="text-xs text-gray-600 font-semibold inline-flex items-center gap-2 hover:text-brand-rosedark"
+              ><svg
+                class="w-4 h-4 text-green-600"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.5 3.5A11.8 11.8 0 0012.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.4-1.7a11.8 11.8 0 005.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4z"
+                /></svg
+              >WhatsApp Support</a
+            >
+            <a
+              href="https://www.instagram.com/sheen_n_shay/"
+              target="_blank"
+              rel="noopener"
+              class="text-xs text-gray-500 mt-2 inline-flex items-center gap-2 hover:text-brand-rosedark"
+              ><svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="18" cy="6" r="1" fill="currentColor" /></svg
+              >Instagram: @sheen_n_shay</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 space-y-2 sm:space-y-0"
+        >
+          <p>&copy; 2026 Sheen & Shay Creates. All Rights Reserved.</p>
+
+          <!-- Secret Admin Footer Keyhole -->
+          <button
+            onclick="openAdminPasscodeModal()"
+            title="Store admin"
+            aria-label="Store admin"
+            class="opacity-40 hover:opacity-100 transition-opacity p-1"
+          >
+            <svg
+              class="w-4 h-4 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 0121 9z"
+              />
+            </svg>
+          </button>
+
+          <p class="flex items-center space-x-1">
+            <span>Crafted with</span>
+            <svg
+              class="w-3.5 h-3.5 text-rose-500 fill-current inline-block"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+            <span>in Pakistan</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SLIDE-OVER CART DRAWER -->
+    <div
+      id="cartDrawer"
+      class="fixed inset-0 z-50 overflow-hidden hidden pointer-events-none"
+      aria-labelledby="slide-over-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        id="cartBackdrop"
+        onclick="toggleCartDrawer(false)"
+        class="absolute inset-0 bg-gray-900/40 backdrop-blur-xs opacity-0 transition-opacity duration-300"
+      ></div>
+
+      <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+        <div
+          id="cartPanel"
+          class="w-screen max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pointer-events-auto"
+        >
+          <div
+            class="px-6 py-5 bg-gradient-to-r from-brand-pink/60 to-brand-lightpink border-b border-brand-rose/20 flex items-center justify-between"
+          >
+            <div class="flex items-center space-x-2 text-brand-rosedark">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                />
+              </svg>
+              <h2 class="font-serif font-bold text-lg text-gray-900">
+                Your Shopping Cart
+              </h2>
+            </div>
+            <button
+              onclick="toggleCartDrawer(false)"
+              class="p-2 rounded-full text-gray-400 hover:text-gray-600 hover:bg-white/60"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Free Shipping Indicator -->
+          <div
+            class="bg-brand-pink/20 px-6 py-2.5 border-b border-brand-rose/10"
+          >
+            <div
+              id="freeShipNotice"
+              class="text-[11px] font-semibold text-brand-rosedark text-center mb-1 flex items-center justify-center space-x-1"
+            >
+              <svg
+                class="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span>Add PKR 6,000 for FREE Pakistan Delivery!</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-1.5 overflow-hidden">
+              <div
+                id="freeShipBar"
+                class="bg-brand-rosedark h-1.5 rounded-full transition-all duration-300"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Cart List -->
+          <div
+            id="cartItemsList"
+            class="flex-1 overflow-y-auto px-6 py-4 space-y-4"
+          >
+            <!-- Dynamic Items -->
+          </div>
+
+          <!-- Promo Code & Totals -->
+          <div class="border-t border-gray-100 p-6 bg-white space-y-3">
+            <div class="flex space-x-2">
+              <input
+                type="text"
+                id="promoInput"
+                placeholder="Promo code (SHEEN10)"
+                class="flex-1 px-3 py-2 rounded-xl border border-gray-200 text-xs uppercase focus:outline-none focus:border-brand-rosedark"
+              />
+              <button
+                onclick="applyPromoCode()"
+                class="px-3.5 py-2 rounded-xl bg-gray-900 text-white text-xs font-bold hover:bg-gray-800"
+              >
+                Apply
+              </button>
+            </div>
+
+            <div class="space-y-1.5 text-xs text-gray-600 pt-1">
+              <div class="flex justify-between">
+                <span>Subtotal</span>
+                <span id="cartSubtotal" class="font-semibold text-gray-900"
+                  >PKR 0</span
+                >
+              </div>
+              <div
+                id="promoDiscountRow"
+                class="flex justify-between text-emerald-600 hidden"
+              >
+                <span>Promo Discount (10%)</span>
+                <span id="promoDiscountAmount" class="font-semibold"
+                  >-PKR 0</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span>Delivery Fee</span>
+                <span id="cartDeliveryFee" class="font-semibold text-gray-900"
+                  >PKR 250</span
+                >
+              </div>
+              <div
+                class="flex justify-between text-sm font-bold text-gray-900 pt-2 border-t border-gray-100"
+              >
+                <span>Grand Total</span>
+                <span id="cartGrandTotal" class="text-brand-rosedark text-base"
+                  >PKR 0</span
+                >
+              </div>
+            </div>
+
+            <button
+              id="checkoutBtn"
+              onclick="openCheckoutModal()"
+              class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-brand-rosedark to-brand-rose text-white font-bold text-sm shadow-md hover:shadow-lg transition-all text-center"
+            >
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERNAL PKR CHECKOUT MODAL -->
+    <div
+      id="checkoutModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/50 backdrop-blur-sm hidden"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-brand-rose/30 p-6 sm:p-8 relative"
+      >
+        <button
+          onclick="closeCheckoutModal()"
+          aria-label="Close"
+          class="absolute top-4 right-4 p-2 rounded-full text-gray-400 hover:bg-gray-100"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <div class="text-center mb-6">
+          <div
+            class="w-12 h-12 bg-brand-pink/50 rounded-full flex items-center justify-center mx-auto text-brand-rosedark mb-2"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+          <h3 class="font-serif font-bold text-2xl text-gray-900">
+            Checkout & Shipping Details
+          </h3>
+          <p class="text-xs text-gray-500 mt-1">
+            Provide delivery details for instant Pakistan dispatch
+          </p>
+        </div>
+
+        <form
+          id="checkoutForm"
+          onsubmit="processOrderCheckout(event)"
+          class="space-y-4"
+        >
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1"
+              >Full Name *</label
+            >
+            <input
+              type="text"
+              id="chkName"
+              required
+              autocomplete="name"
+              placeholder="e.g. Fatima Ali"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-xs sm:text-sm focus:border-brand-rosedark focus:ring-1 focus:ring-brand-rosedark"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Phone / WhatsApp *</label
+              >
+              <input
+                type="tel"
+                id="chkPhone"
+                required
+                autocomplete="tel"
+                inputmode="numeric"
+                placeholder="03001234567"
+                pattern="^03[0-9]{9}$"
+                title="Please enter valid Pakistani 11-digit mobile number starting with 03"
+                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-xs sm:text-sm focus:border-brand-rosedark"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 mb-1"
+                >Delivery City *</label
+              >
+              <select
+                id="chkCity"
+                required
+                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-xs sm:text-sm focus:border-brand-rosedark"
+              >
+                <option value="Karachi">Karachi</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Rawalpindi">Rawalpindi</option>
+                <option value="Faisalabad">Faisalabad</option>
+                <option value="Multan">Multan</option>
+                <option value="Peshawar">Peshawar</option>
+                <option value="Quetta">Quetta</option>
+                <option value="Sialkot">Sialkot</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1"
+              >Complete Street Shipping Address *</label
+            >
+            <textarea
+              id="chkAddress"
+              rows="2"
+              required
+              autocomplete="street-address"
+              placeholder="House/Apartment #, Block/Street, Landmark..."
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-xs sm:text-sm focus:border-brand-rosedark resize-none"
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1"
+              >Payment Method *</label
+            >
+            <div class="grid grid-cols-3 gap-2">
+              <label
+                class="border rounded-xl p-2.5 flex flex-col items-center justify-center cursor-pointer text-center hover:bg-pink-50 transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payMethod"
+                  value="Cash on Delivery (COD)"
+                  checked
+                  class="accent-brand-rosedark text-xs"
+                />
+                <span class="text-[11px] font-bold text-gray-800 mt-1"
+                  >Cash on Delivery</span
+                >
+              </label>
+              <label
+                class="border rounded-xl p-2.5 flex flex-col items-center justify-center cursor-pointer text-center hover:bg-pink-50 transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payMethod"
+                  value="JazzCash / EasyPaisa"
+                  class="accent-brand-rosedark text-xs"
+                />
+                <span class="text-[11px] font-bold text-gray-800 mt-1"
+                  >JazzCash / EasyPaisa</span
+                >
+              </label>
+              <label
+                class="border rounded-xl p-2.5 flex flex-col items-center justify-center cursor-pointer text-center hover:bg-pink-50 transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payMethod"
+                  value="Bank Transfer"
+                  class="accent-brand-rosedark text-xs"
+                />
+                <span class="text-[11px] font-bold text-gray-800 mt-1"
+                  >Bank Transfer</span
+                >
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1"
+              >Gift Note Message Card (Optional)</label
+            >
+            <input
+              type="text"
+              id="chkGiftNote"
+              placeholder="e.g. Happy Birthday Decor! With love, Sara."
+              class="w-full px-4 py-2 rounded-xl border border-gray-200 text-xs focus:border-brand-rosedark"
+            />
+          </div>
+
+          <div
+            class="bg-brand-pink/20 p-3 rounded-xl flex justify-between items-center text-xs font-bold text-gray-800"
+          >
+            <span>Payable Total:</span>
+            <span id="chkModalTotal" class="text-base text-brand-rosedark"
+              >PKR 0</span
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-brand-rosedark to-brand-rose text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
+          >
+            Confirm & Place Order
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- RECEIPT TICKET MODAL -->
+    <div
+      id="receiptModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm hidden"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-brand-pink relative overflow-hidden"
+        id="printableReceipt"
+      >
+        <div class="text-center border-b border-dashed border-gray-300 pb-4">
+          <div
+            class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto text-green-600 mb-2"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-gray-900">
+            Order Placed Successfully!
+          </h3>
+          <p
+            class="text-xs text-brand-rosedark font-bold mt-1"
+            id="receiptOrderId"
+          >
+            #SS-1000
+          </p>
+          <p class="text-[10px] text-gray-400" id="receiptDate">
+            Date: 2026-11-08
+          </p>
+          <p class="text-[11px] text-gray-600 mt-1">
+            Tracking number:
+            <strong id="receiptTrackingNumber" class="text-brand-rosedark"
+              >--</strong
+            >
+          </p>
+        </div>
+
+        <div
+          class="py-4 space-y-2 text-xs text-gray-700 border-b border-dashed border-gray-300"
+          id="receiptItems"
+        >
+          <!-- Dynamically populated receipt list -->
+        </div>
+
+        <div class="py-3 space-y-1 text-xs border-b border-gray-200">
+          <div class="flex justify-between text-gray-500">
+            <span>Customer Name:</span>
+            <span id="receiptCustName" class="font-bold text-gray-800">--</span>
+          </div>
+          <div class="flex justify-between text-gray-500">
+            <span>City & Address:</span>
+            <span id="receiptCustCity" class="font-bold text-gray-800">--</span>
+          </div>
+          <div class="flex justify-between text-gray-500">
+            <span>Payment Method:</span>
+            <span id="receiptPayMethod" class="font-bold text-gray-800"
+              >COD</span
+            >
+          </div>
+          <div
+            class="flex justify-between text-sm font-bold text-gray-900 pt-1"
+          >
+            <span>Grand Total:</span>
+            <span id="receiptGrandTotal" class="text-brand-rosedark"
+              >PKR 0</span
+            >
+          </div>
+        </div>
+
+        <div class="pt-4 flex space-x-2">
+          <button
+            onclick="window.print()"
+            class="flex-1 py-2.5 rounded-xl border border-gray-300 text-xs font-bold text-gray-700 hover:bg-gray-50 flex items-center justify-center space-x-1"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+              />
+            </svg>
+            <span>Print Receipt</span>
+          </button>
+          <button
+            onclick="closeReceiptModal()"
+            class="flex-1 py-2.5 rounded-xl bg-brand-rosedark text-white text-xs font-bold hover:bg-brand-rose"
+          >
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECRET ADMIN PASSCODE MODAL -->
+    <div
+      id="adminPasscodeModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-xs hidden"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-xs w-full p-6 shadow-2xl border border-gray-200 text-center space-y-4"
+      >
+        <div
+          class="w-12 h-12 rounded-full bg-brand-pink mx-auto flex items-center justify-center text-brand-rosedark"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+            />
+          </svg>
+        </div>
+        <h3 class="font-bold text-gray-800 text-base">Store Admin Portal</h3>
+        <p class="text-xs text-gray-500">
+          Enter passcode to access desktop admin dashboard
+        </p>
+
+        <form onsubmit="handleAdminPasscodeSubmit(event)">
+          <input
+            type="password"
+            id="adminPassInput"
+            placeholder="Enter Passcode..."
+            required
+            class="w-full px-4 py-2 rounded-xl border border-gray-300 text-sm mb-3 focus:outline-none focus:border-brand-rosedark text-center"
+          />
+          <div class="flex space-x-2">
+            <button
+              type="button"
+              onclick="closeAdminPasscodeModal()"
+              class="flex-1 py-2 rounded-xl bg-gray-100 text-gray-600 text-xs font-semibold"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              class="flex-1 py-2 rounded-xl bg-brand-rosedark text-white text-xs font-bold hover:bg-brand-rose"
+            >
+              Unlock
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- MOBILE ADMIN RESTRICTION MODAL -->
+    <div
+      id="adminMobileRestrictModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-xs hidden"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-xs w-full p-6 shadow-2xl border border-gray-200 text-center space-y-4"
+      >
+        <div
+          class="w-12 h-12 rounded-full bg-amber-100 mx-auto flex items-center justify-center text-amber-600"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            />
+          </svg>
+        </div>
+        <h3 class="font-bold text-gray-900 text-base">
+          Desktop Workstation Only
+        </h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+          Admin Panel Management is strictly restricted to screens with width of
+          <strong>1024px or higher</strong> for optimal inventory & order
+          management UX.
+        </p>
+        <button
+          onclick="closeAdminMobileRestrictModal()"
+          class="w-full py-2.5 rounded-xl bg-gray-900 text-white text-xs font-bold hover:bg-gray-800 transition-colors"
+        >
+          Back to Storefront
+        </button>
+      </div>
+    </div>
+
+    <!-- MODULAR CODE SOURCE VIEWER MODAL -->
+    <div
+      id="codeViewerModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/70 backdrop-blur-md hidden"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-4xl w-full h-[85vh] shadow-2xl flex flex-col overflow-hidden border border-brand-rose/40"
+      >
+        <div
+          class="px-6 py-4 bg-gray-900 text-white flex items-center justify-between border-b border-gray-800"
+        >
+          <div class="flex items-center space-x-2">
+            <svg
+              class="w-5 h-5 text-brand-pink"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+              />
+            </svg>
+            <h3 class="font-mono text-sm font-bold text-brand-pink">
+              Modular Project Source Code Files
+            </h3>
+          </div>
+          <button
+            onclick="toggleModularCodeViewer()"
+            class="text-gray-400 hover:text-white p-1"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div
+          class="bg-gray-800 px-4 pt-2 flex space-x-1 overflow-x-auto border-b border-gray-700"
+        >
+          <button
+            onclick="showCodeTab('indexHtml')"
+            id="tab_indexHtml"
+            class="code-tab-btn px-4 py-2 text-xs font-mono rounded-t-lg bg-gray-900 text-brand-pink font-bold border-t-2 border-brand-pink"
+          >
+            index.html
+          </button>
+          <button
+            onclick="showCodeTab('adminHtml')"
+            id="tab_adminHtml"
+            class="code-tab-btn px-4 py-2 text-xs font-mono rounded-t-lg bg-gray-700 text-gray-300 hover:bg-gray-600"
+          >
+            admin.html
+          </button>
+          <button
+            onclick="showCodeTab('appJs')"
+            id="tab_appJs"
+            class="code-tab-btn px-4 py-2 text-xs font-mono rounded-t-lg bg-gray-700 text-gray-300 hover:bg-gray-600"
+          >
+            app.js
+          </button>
+          <button
+            onclick="showCodeTab('adminJs')"
+            id="tab_adminJs"
+            class="code-tab-btn px-4 py-2 text-xs font-mono rounded-t-lg bg-gray-700 text-gray-300 hover:bg-gray-600"
+          >
+            admin.js
+          </button>
+          <button
+            onclick="showCodeTab('stylesCss')"
+            id="tab_stylesCss"
+            class="code-tab-btn px-4 py-2 text-xs font-mono rounded-t-lg bg-gray-700 text-gray-300 hover:bg-gray-600"
+          >
+            styles.css
+          </button>
+        </div>
+
+        <div
+          class="flex-1 bg-gray-950 p-4 overflow-auto font-mono text-xs text-green-400 relative"
+        >
+          <button
+            onclick="copyCurrentCodeTab()"
+            class="absolute top-4 right-4 bg-brand-rosedark text-white px-3 py-1.5 rounded-md text-[11px] font-sans font-bold hover:bg-brand-rose transition-colors shadow"
+          >
+            Copy Code
+          </button>
+          <pre
+            id="codeSnippetBox"
+            class="whitespace-pre-wrap leading-relaxed select-all"
+          >
+Loading source file...</pre
+          >
+        </div>
+
+        <div
+          class="px-6 py-3 bg-gray-900 text-gray-400 text-xs flex justify-between items-center"
+        >
+          <span
+            >Copy individual modular files for standard multi-file
+            deployment</span
+          >
+          <span class="text-brand-pink">Sheen & Shay Architecture</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST CONTAINERS -->
+    <div
+      id="toastContainer"
+      class="fixed bottom-5 right-5 z-50 space-y-2 pointer-events-none"
+    ></div>
+  </body>
+</html>
