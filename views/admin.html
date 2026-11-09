@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8f8">
+    <title>Admin Dashboard | Sheen &amp; Shay Creates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/admin.css">
+  </head>
+  <body class="dashboard-page">
+    <header class="topbar">
+      <a class="wordmark" href="/">Sheen <span>&amp;</span> Shay</a>
+      <div class="topbar-actions"><span id="adminEmail" class="muted"></span><a class="button button-light" href="/">View store</a><button id="logoutButton" class="button button-outline" type="button">Sign out</button></div>
+    </header>
+    <main class="dashboard">
+      <div class="page-heading"><div><p class="eyebrow">STORE MANAGEMENT</p><h1>Your dashboard</h1><p class="muted">A clear view of your products, orders and daily activity.</p></div></div>
+      <p id="notice" class="notice" role="status" hidden></p>
+      <section id="overviewPanel">
+        <div class="stats-grid">
+          <article class="stat-card"><span>Active products</span><strong id="activeProducts">—</strong></article>
+          <article class="stat-card"><span>Open orders</span><strong id="openOrders">—</strong></article>
+          <article class="stat-card"><span>Payments to confirm</span><strong id="pendingPayments">—</strong></article>
+          <article class="stat-card"><span>Confirmed revenue</span><strong id="confirmedRevenue">—</strong></article>
+        </div>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Recent orders</h2><p class="muted">The latest activity from your store.</p></div><button class="button button-outline" data-tab="orders">View all orders</button></div>
+          <div id="recentOrders" class="table-wrap"></div>
+        </section>
+        <section class="panel security-panel">
+          <div class="panel-heading"><div><h2>Account security</h2><p class="muted">Choose a unique passphrase and keep it private.</p></div></div>
+          <form id="passwordForm" class="category-form">
+            <label>Current password<input name="currentPassword" type="password" autocomplete="current-password" required maxlength="128"></label>
+            <label>New password<input name="newPassword" type="password" autocomplete="new-password" required minlength="14" maxlength="128"></label>
+            <button class="button button-primary" type="submit">Update password</button>
+          </form>
+        </section>
+      </section>
+      <nav class="tabs" aria-label="Store management">
+        <button class="tab active" data-tab="overview">Overview</button>
+        <button class="tab" data-tab="products">Products</button>
+        <button class="tab" data-tab="categories">Categories</button>
+        <button class="tab" data-tab="orders">Orders</button>
+      </nav>
+      <section id="productsPanel" class="panel page-panel" hidden>
+        <div class="panel-heading"><div><h2>Product catalog</h2><p class="muted">Update product details, pricing, images and availability.</p></div><button id="newProductButton" class="button button-primary">Add a product</button></div>
+        <div class="toolbar"><input id="productSearch" type="search" placeholder="Search products or SKU"><select id="productVisibility"><option value="">All products</option><option value="true">Active</option><option value="false">Archived</option></select></div>
+        <div id="productsTable" class="table-wrap"></div>
+        <form id="productForm" class="editor" hidden>
+          <div class="panel-heading"><div><h3 id="productFormTitle">Add a product</h3><p class="muted">Prices are stored and calculated on the server.</p></div><button id="closeProductForm" type="button" class="icon-button" aria-label="Close product editor">×</button></div>
+          <input name="id" type="hidden">
+          <div class="form-grid">
+            <label>Product name<input name="title" required maxlength="140"></label>
+            <label>SKU<input name="sku" maxlength="40" placeholder="Generated if left blank"></label>
+            <label>Category<select name="category" required></select></label>
+            <label>Regular price (PKR)<input name="price" type="number" min="1" step="1" required></label>
+            <label class="check-row"><input name="saleEnabled" type="checkbox"> Product is on sale</label>
+            <label>Sale price (PKR)<input name="salePrice" type="number" min="1" step="1"></label>
+            <label>Stock quantity <input name="stockQuantity" type="number" min="0" step="1" placeholder="Leave blank to not track quantity"></label>
+            <label>Availability<select name="stockStatus"><option>In Stock</option><option>Limited Stock</option><option>Out of Stock</option></select></label>
+            <label class="check-row"><input name="featured" type="checkbox"> Feature on storefront</label>
+            <label class="check-row"><input name="active" type="checkbox" checked> Active product</label>
+            <label class="wide">Description<textarea name="description" rows="3" required maxlength="3000"></textarea></label>
+            <label class="wide">Image URLs (one HTTPS URL per line)<textarea name="imageUrls" rows="3" placeholder="https://…"></textarea></label>
+            <label class="wide">Upload product images<input name="imageFiles" type="file" accept="image/jpeg,image/png,image/webp,image/avif" multiple><span class="help">Cloudinary setup is required for uploads; HTTPS image URLs may also be used.</span></label>
+            <label class="wide">Personalization options (one per line)<textarea name="customizationOptions" rows="2"></textarea></label>
+            <label class="wide">Tags (one per line)<textarea name="tags" rows="2"></textarea></label>
+            <label>SEO title<input name="metaTitle" maxlength="160"></label>
+            <label>SEO description<textarea name="metaDescription" rows="2" maxlength="320"></textarea></label>
+            <label>Product rating (optional)<input name="rating" type="number" min="0" max="5" step="0.1" placeholder="Leave blank if not collected"></label>
+          </div>
+          <div class="form-actions"><button class="button button-primary" type="submit">Save product</button><button id="cancelProductForm" class="button button-outline" type="button">Cancel</button></div>
+        </form>
+      </section>
+      <section id="categoriesPanel" class="panel page-panel" hidden>
+        <div class="panel-heading"><div><h2>Categories</h2><p class="muted">Organize the products customers can browse.</p></div></div>
+        <form id="categoryForm" class="category-form"><input name="id" type="hidden"><label>Category name<input name="name" required maxlength="80"></label><label>Description<input name="description" maxlength="240"></label><button class="button button-primary" type="submit">Save category</button><button id="cancelCategoryEdit" class="button button-outline" type="button" hidden>Cancel</button></form>
+        <div id="categoriesList" class="table-wrap"></div>
+      </section>
+      <section id="ordersPanel" class="panel page-panel" hidden>
+        <div class="panel-heading"><div><h2>Customer orders</h2><p class="muted">Review details, update fulfillment and keep tracking information current.</p></div><button id="exportOrders" class="button button-outline">Export CSV</button></div>
+        <div class="toolbar"><input id="orderSearch" type="search" placeholder="Search order, name, email or phone"><select id="orderStatus"><option value="">All order statuses</option></select><select id="paymentStatus"><option value="">All payment statuses</option></select><label class="archive-filter"><input id="showArchivedOrders" type="checkbox"> Archived</label></div>
+        <div id="ordersTable" class="table-wrap"></div>
+        <div class="pagination"><button id="prevOrders" class="button button-outline">Previous</button><span id="orderPage"></span><button id="nextOrders" class="button button-outline">Next</button></div>
+      </section>
+    </main>
+    <dialog id="orderDialog" class="order-dialog"><form method="dialog" class="dialog-close"><button class="icon-button" aria-label="Close order details">×</button></form><div id="orderDetails"></div></dialog>
+    <script src="/admin.js" defer></script>
+  </body>
+</html>

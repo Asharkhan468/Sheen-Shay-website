@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8f8">
+    <title>Admin Sign In | Sheen &amp; Shay Creates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/admin.css">
+  </head>
+  <body class="login-page">
+    <main class="login-card">
+      <a class="wordmark" href="/">Sheen <span>&amp;</span> Shay</a>
+      <p class="eyebrow">PRIVATE ADMINISTRATION</p>
+      <h1>Welcome back</h1>
+      <p class="muted">Sign in to manage your catalog and customer orders.</p>
+      <form id="loginForm" class="stack">
+        <label>Email address<input name="email" type="email" autocomplete="username" required maxlength="254"></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required maxlength="128"></label>
+        <p id="loginError" class="form-error" role="alert" hidden></p>
+        <button class="button button-primary" type="submit">Sign in securely</button>
+      </form>
+      <a class="back-link" href="/">Return to the storefront</a>
+    </main>
+    <script src="/admin-login.js" defer></script>
+  </body>
+</html>

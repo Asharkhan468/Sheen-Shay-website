@@ -1111,6 +1111,67 @@
       </section>
     </main>
 
+    <section
+      id="order-tracking"
+      class="py-16 sm:py-20 bg-brand-lightpink/30 border-y border-brand-rose/20"
+    >
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto">
+          <p class="story-eyebrow">A little peace of mind</p>
+          <h2 class="editorial-title">Follow your order</h2>
+          <p class="story-copy mt-3">
+            Enter your order number and the phone number used at checkout to
+            see the latest status.
+          </p>
+        </div>
+        <form
+          onsubmit="trackCustomerOrder(event)"
+          class="mt-8 grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-3 items-end"
+        >
+          <div>
+            <label for="trackingOrderId" class="block text-xs font-semibold text-gray-700 mb-1.5">
+              Order number
+            </label>
+            <input
+              id="trackingOrderId"
+              type="text"
+              required
+              maxlength="40"
+              autocomplete="off"
+              placeholder="e.g. SS-..."
+              class="w-full min-w-0 px-4 py-3 rounded-xl border border-brand-rose/30 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-rose/40"
+            />
+          </div>
+          <div>
+            <label for="trackingPhone" class="block text-xs font-semibold text-gray-700 mb-1.5">
+              Checkout phone number
+            </label>
+            <input
+              id="trackingPhone"
+              type="tel"
+              required
+              inputmode="numeric"
+              autocomplete="tel"
+              pattern="^03[0-9]{9}$"
+              title="Enter the 11-digit Pakistani mobile number used at checkout."
+              placeholder="03001234567"
+              class="w-full min-w-0 px-4 py-3 rounded-xl border border-brand-rose/30 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-rose/40"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-rosedark text-white text-sm font-semibold hover:bg-brand-rose transition-colors"
+          >
+            View status
+          </button>
+        </form>
+        <p class="mt-3 text-center text-xs text-gray-500">
+          Order details are shown only when the phone number matches your order.
+        </p>
+        <div id="trackingResult" class="hidden mt-6" aria-live="polite"></div>
+      </div>
+    </section>
+
     <!-- PRODUCT QUICK-VIEW MODAL (PRODUCT OPEN) -->
     <div
       id="productQuickViewModal"
@@ -1148,463 +1209,6 @@
       </div>
     </div>
 
-    <!-- ADMIN DASHBOARD CONTAINER (Secret Access) -->
-    <main
-      id="adminView"
-      class="hidden flex-1 transition-opacity duration-300 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8"
-    >
-      <div
-        class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 bg-white p-6 rounded-3xl shadow-sm border border-brand-rose/30"
-      >
-        <div>
-          <div class="flex items-center space-x-2">
-            <span
-              class="px-2.5 py-1 rounded-full bg-brand-pink text-brand-rosedark text-xs font-bold uppercase"
-              >Store Owner Admin</span
-            >
-            <span class="text-xs text-emerald-600 font-bold flex items-center"
-              >● LocalStorage Sync Active</span
-            >
-          </div>
-          <h2 class="text-2xl font-serif font-bold text-gray-900 mt-1">
-            Management Dashboard
-          </h2>
-        </div>
-
-        <div class="flex items-center space-x-2">
-          <button
-            onclick="exportOrdersCSV()"
-            class="px-3.5 py-2 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold transition-colors flex items-center space-x-1"
-          >
-            <svg
-              class="w-4 h-4 text-gray-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              />
-            </svg>
-            <span>Export CSV</span>
-          </button>
-          <button
-            onclick="switchView('store')"
-            class="px-4 py-2 rounded-xl bg-brand-pink text-brand-rosedark hover:bg-brand-rose hover:text-white text-xs font-bold transition-colors"
-          >
-            ← Storefront
-          </button>
-          <button
-            onclick="logoutAdmin()"
-            class="px-3.5 py-2 rounded-xl bg-red-50 text-red-600 hover:bg-red-100 text-xs font-bold transition-colors"
-          >
-            Lock Admin
-          </button>
-        </div>
-      </div>
-
-      <!-- Metric KPI Cards -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <div
-          class="glass-card p-5 rounded-2xl border-l-4 border-brand-rosedark"
-        >
-          <p class="text-[11px] font-bold text-gray-400 uppercase">
-            Total Revenue
-          </p>
-          <h3
-            id="kpiRevenue"
-            class="text-xl sm:text-2xl font-bold text-gray-900 mt-1"
-          >
-            PKR 0
-          </h3>
-        </div>
-        <div class="glass-card p-5 rounded-2xl border-l-4 border-blue-400">
-          <p class="text-[11px] font-bold text-gray-400 uppercase">
-            Total Orders
-          </p>
-          <h3
-            id="kpiTotalOrders"
-            class="text-xl sm:text-2xl font-bold text-gray-900 mt-1"
-          >
-            0
-          </h3>
-        </div>
-        <div class="glass-card p-5 rounded-2xl border-l-4 border-amber-400">
-          <p class="text-[11px] font-bold text-gray-400 uppercase">
-            Pending Orders
-          </p>
-          <h3
-            id="kpiPendingOrders"
-            class="text-xl sm:text-2xl font-bold text-gray-900 mt-1"
-          >
-            0
-          </h3>
-        </div>
-        <div class="glass-card p-5 rounded-2xl border-l-4 border-emerald-400">
-          <p class="text-[11px] font-bold text-gray-400 uppercase">
-            Active Products
-          </p>
-          <h3
-            id="kpiActiveProducts"
-            class="text-xl sm:text-2xl font-bold text-gray-900 mt-1"
-          >
-            0
-          </h3>
-        </div>
-      </div>
-
-      <!-- Admin Tab Navigation -->
-      <div class="flex border-b border-gray-200 mb-6 space-x-2">
-        <button
-          onclick="switchAdminTab('products')"
-          id="adminTabProdBtn"
-          class="py-3 px-6 text-xs sm:text-sm font-bold border-b-2 border-brand-rosedark text-brand-rosedark focus:outline-none"
-        >
-          📦 Products Inventory CRUD
-        </button>
-        <button
-          onclick="switchAdminTab('orders')"
-          id="adminTabOrdersBtn"
-          class="py-3 px-6 text-xs sm:text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none"
-        >
-          🛍️ Customer Orders Dashboard
-        </button>
-      </div>
-
-      <!-- TAB 1: PRODUCT CRUD MANAGEMENT -->
-      <div id="adminTabProducts" class="space-y-8">
-        <div
-          class="glass-card p-6 rounded-3xl border border-brand-rose/30 shadow-md"
-        >
-          <h3 id="prodFormTitle" class="text-base font-bold text-gray-900 mb-4">
-            Add New Luxury Product
-          </h3>
-          <form
-            id="productForm"
-            onsubmit="handleProductSave(event)"
-            class="grid grid-cols-1 md:grid-cols-3 gap-4"
-          >
-            <input type="hidden" id="prodEditId" value="" />
-
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1"
-                >Product Title *</label
-              >
-              <input
-                type="text"
-                id="prodTitle"
-                required
-                placeholder="e.g., Luxury Eternal Rose Box"
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
-              />
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1"
-                >Category *</label
-              >
-              <select
-                id="prodCategory"
-                required
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
-              >
-                <option value="Luxury Hampers">Luxury Hampers</option>
-                <option value="Personalized Keepsakes">
-                  Personalized Keepsakes
-                </option>
-                <option value="Floral & Bouquets">Floral & Bouquets</option>
-                <option value="LED & Lights">LED & Lights</option>
-                <option value="Custom Accessories">Custom Accessories</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1"
-                >Regular / Original Price (PKR) *</label
-              >
-              <input
-                type="number"
-                id="prodOrigPrice"
-                required
-                min="1"
-                oninput="updateProductDiscountPreview()"
-                placeholder="e.g., 5200"
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
-              />
-              <p class="text-[10px] text-gray-500 mt-1">
-                Normal price when no sale is active.
-              </p>
-            </div>
-
-            <div
-              class="md:col-span-2 rounded-xl border border-brand-rose/30 bg-brand-pink/20 p-3"
-            >
-              <label
-                class="flex items-center gap-2 text-xs font-bold text-gray-800 cursor-pointer"
-              >
-                <input
-                  type="checkbox"
-                  id="prodSaleEnabled"
-                  onchange="toggleProductSaleFields()"
-                  class="accent-pink-600 w-4 h-4"
-                />
-                Put this product on sale
-              </label>
-              <p class="text-[10px] text-gray-500 mt-1">
-                Sale is optional and can be enabled separately for each product.
-              </p>
-              <div id="prodSalePriceWrap" class="hidden mt-3">
-                <label class="block text-xs font-bold text-gray-700 mb-1"
-                  >Discounted / Sale Price (PKR) *</label
-                >
-                <input
-                  type="number"
-                  id="prodSalePrice"
-                  min="1"
-                  oninput="updateProductDiscountPreview()"
-                  placeholder="e.g., 4500"
-                  class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
-                />
-                <p
-                  id="prodDiscountPreview"
-                  class="text-[10px] font-bold text-brand-rosedark mt-1"
-                ></p>
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1"
-                >Product Image</label
-              >
-              <div class="space-y-2">
-                <div class="flex flex-wrap gap-3 text-xs">
-                  <label class="flex items-center gap-2"
-                    ><input
-                      type="radio"
-                      name="prodImageMode"
-                      value="upload"
-                      checked
-                      onchange="toggleProductImageMode()"
-                    />
-                    Upload from device</label
-                  >
-                  <label class="flex items-center gap-2"
-                    ><input
-                      type="radio"
-                      name="prodImageMode"
-                      value="url"
-                      onchange="toggleProductImageMode()"
-                    />
-                    Use image URL</label
-                  >
-                </div>
-                <input
-                  type="file"
-                  id="prodImageFile"
-                  accept="image/*"
-                  onchange="previewProductImage(event)"
-                  class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs bg-white"
-                />
-                <input
-                  type="url"
-                  id="prodImageUrl"
-                  placeholder="https://example.com/product-image.jpg"
-                  class="hidden w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
-                />
-                <img
-                  id="prodImagePreview"
-                  class="hidden w-24 h-24 object-cover rounded-xl border border-brand-rose/30"
-                  alt="Product image preview"
-                />
-                <p class="text-[10px] text-gray-500">
-                  Device uploads are compressed and saved in this browser. URL
-                  option is also available.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1"
-                >Stock Availability</label
-              >
-              <select
-                id="prodStockStatus"
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
-              >
-                <option value="In Stock">In Stock</option>
-                <option value="Limited Stock">Limited Stock</option>
-                <option value="Out of Stock">Out of Stock</option>
-              </select>
-            </div>
-
-            <div class="md:col-span-3">
-              <label class="block text-xs font-bold text-gray-700 mb-1"
-                >Short Description *</label
-              >
-              <input
-                type="text"
-                id="prodDescription"
-                required
-                placeholder="Brief description of handcrafted contents..."
-                class="w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:border-brand-rosedark"
-              />
-            </div>
-
-            <div class="md:col-span-3 flex justify-end space-x-2 pt-2">
-              <button
-                type="button"
-                onclick="resetProductForm()"
-                class="px-5 py-2 rounded-xl border border-gray-300 text-xs font-bold text-gray-600 hover:bg-gray-100"
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                id="saveProdBtn"
-                class="px-6 py-2 rounded-xl bg-brand-rosedark text-white text-xs font-bold hover:bg-brand-rose transition-colors shadow-xs"
-              >
-                Save Product
-              </button>
-            </div>
-          </form>
-        </div>
-
-        <!-- Products Table -->
-        <div
-          class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden"
-        >
-          <div
-            class="px-6 py-4 border-b border-gray-100 flex justify-between items-center"
-          >
-            <h3 class="font-bold text-gray-800 text-sm sm:text-base">
-              Current Store Inventory
-            </h3>
-          </div>
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
-              <thead>
-                <tr
-                  class="bg-gray-50 text-[11px] font-extrabold uppercase text-gray-500 border-b border-gray-100"
-                >
-                  <th class="py-3.5 px-6">Item</th>
-                  <th class="py-3.5 px-4">Category</th>
-                  <th class="py-3.5 px-4">Price (PKR)</th>
-                  <th class="py-3.5 px-4">Stock</th>
-                  <th class="py-3.5 px-6 text-right">Actions</th>
-                </tr>
-              </thead>
-              <tbody
-                id="adminProductsTableBody"
-                class="divide-y divide-gray-100 text-xs text-gray-700"
-              >
-                <!-- Populated dynamically -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB 2: CUSTOMER ORDERS MANAGEMENT -->
-      <div id="adminTabOrders" class="hidden space-y-6">
-        <div
-          class="flex flex-col sm:flex-row items-center justify-between gap-3 mb-4"
-        >
-          <div class="w-full sm:w-auto">
-            <input
-              type="text"
-              id="adminOrderSearch"
-              oninput="renderAdminOrders()"
-              placeholder="Search Order ID or Customer Name..."
-              class="px-4 py-2 rounded-xl border border-gray-300 text-xs bg-white w-full sm:w-64 focus:outline-none focus:border-brand-rosedark"
-            />
-          </div>
-
-          <select
-            id="orderStatusFilter"
-            onchange="renderAdminOrders()"
-            class="px-3 py-2 rounded-xl border border-gray-300 text-xs bg-white font-medium w-full sm:w-auto"
-          >
-            <option value="ALL">All Order Statuses</option>
-            <option value="Pending">Pending</option>
-            <option value="Processing">Processing</option>
-            <option value="Dispatched">Dispatched</option>
-            <option value="Delivered">Delivered</option>
-          </select>
-        </div>
-
-        <div
-          class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden"
-        >
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse">
-              <thead>
-                <tr
-                  class="bg-gray-50 text-[11px] font-extrabold uppercase text-gray-500 border-b border-gray-100"
-                >
-                  <th class="py-3.5 px-6">Order ID & Date</th>
-                  <th class="py-3.5 px-4">Customer Details</th>
-                  <th class="py-3.5 px-4">Items Summary</th>
-                  <th class="py-3.5 px-4">Total PKR</th>
-                  <th class="py-3.5 px-4">Payment & Status</th>
-                  <th class="py-3.5 px-4 text-right">Actions</th>
-                </tr>
-              </thead>
-              <tbody
-                id="adminOrdersTableBody"
-                class="divide-y divide-gray-100 text-xs text-gray-700"
-              >
-                <!-- Populated dynamically -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- ORDER TRACKING -->
-    <section
-      id="order-tracking"
-      class="max-w-4xl mx-auto w-full px-4 sm:px-6 py-10"
-    >
-      <div
-        class="rounded-3xl bg-gradient-to-br from-white to-brand-lightpink border border-brand-rose/25 shadow-lg p-6 sm:p-8"
-      >
-        <div class="text-center mb-5">
-          <span
-            class="text-xs font-bold uppercase tracking-widest text-brand-rosedark"
-            >Order updates</span
-          >
-          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
-            Track Your Order
-          </h2>
-          <p class="text-sm text-gray-500 mt-2">
-            Enter the order number from your receipt to check its latest status.
-          </p>
-        </div>
-        <form
-          onsubmit="trackCustomerOrder(event)"
-          class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto"
-        >
-          <input
-            id="trackingOrderId"
-            required
-            placeholder="e.g. SS-123456"
-            class="flex-1 px-4 py-3 rounded-xl border border-brand-rose/30 bg-white text-sm"
-          />
-          <button
-            class="px-6 py-3 rounded-xl bg-brand-rosedark text-white font-bold text-sm hover:bg-brand-rose transition-colors"
-          >
-            Track Order
-          </button>
-        </form>
-        <div id="trackingResult" class="hidden max-w-xl mx-auto mt-5"></div>
-      </div>
-    </section>
-
-    <!-- FOOTER SECTION -->
     <footer
       class="bg-gradient-to-br from-white via-brand-lightpink/60 to-brand-pink/40 border-t border-brand-rose/30 pt-14 pb-8 mt-auto"
     >
@@ -2034,6 +1638,20 @@
             />
           </div>
 
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1"
+              >Email address (optional)</label
+            >
+            <input
+              type="email"
+              id="chkEmail"
+              autocomplete="email"
+              maxlength="254"
+              placeholder="you@example.com"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-xs sm:text-sm focus:border-brand-rosedark focus:ring-1 focus:ring-brand-rosedark"
+            />
+          </div>
+
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label class="block text-xs font-bold text-gray-700 mb-1"
@@ -2272,105 +1890,6 @@
             Done
           </button>
         </div>
-      </div>
-    </div>
-
-    <!-- SECRET ADMIN PASSCODE MODAL -->
-    <div
-      id="adminPasscodeModal"
-      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-xs hidden"
-    >
-      <div
-        class="bg-white rounded-3xl max-w-xs w-full p-6 shadow-2xl border border-gray-200 text-center space-y-4"
-      >
-        <div
-          class="w-12 h-12 rounded-full bg-brand-pink mx-auto flex items-center justify-center text-brand-rosedark"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-            />
-          </svg>
-        </div>
-        <h3 class="font-bold text-gray-800 text-base">Store Admin Portal</h3>
-        <p class="text-xs text-gray-500">
-          Enter passcode to access desktop admin dashboard
-        </p>
-
-        <form onsubmit="handleAdminPasscodeSubmit(event)">
-          <input
-            type="password"
-            id="adminPassInput"
-            placeholder="Enter Passcode..."
-            required
-            class="w-full px-4 py-2 rounded-xl border border-gray-300 text-sm mb-3 focus:outline-none focus:border-brand-rosedark text-center"
-          />
-          <div class="flex space-x-2">
-            <button
-              type="button"
-              onclick="closeAdminPasscodeModal()"
-              class="flex-1 py-2 rounded-xl bg-gray-100 text-gray-600 text-xs font-semibold"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              class="flex-1 py-2 rounded-xl bg-brand-rosedark text-white text-xs font-bold hover:bg-brand-rose"
-            >
-              Unlock
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- MOBILE ADMIN RESTRICTION MODAL -->
-    <div
-      id="adminMobileRestrictModal"
-      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-xs hidden"
-    >
-      <div
-        class="bg-white rounded-3xl max-w-xs w-full p-6 shadow-2xl border border-gray-200 text-center space-y-4"
-      >
-        <div
-          class="w-12 h-12 rounded-full bg-amber-100 mx-auto flex items-center justify-center text-amber-600"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-            />
-          </svg>
-        </div>
-        <h3 class="font-bold text-gray-900 text-base">
-          Desktop Workstation Only
-        </h3>
-        <p class="text-xs text-gray-600 leading-relaxed">
-          Admin Panel Management is strictly restricted to screens with width of
-          <strong>1024px or higher</strong> for optimal inventory & order
-          management UX.
-        </p>
-        <button
-          onclick="closeAdminMobileRestrictModal()"
-          class="w-full py-2.5 rounded-xl bg-gray-900 text-white text-xs font-bold hover:bg-gray-800 transition-colors"
-        >
-          Back to Storefront
-        </button>
       </div>
     </div>
 
